@@ -1,10 +1,15 @@
+// globals.css → 프로젝트 전체에 적용되는 전역 스타일 파일입니다.
+// layout.tsx에서 import하면 모든 페이지에 자동 적용됩니다.
+
 @import "tailwindcss";
 
+/* CSS 변수(Custom Property) 선언: 라이트 모드 기본 색상 */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* Tailwind의 테마 설정: CSS 변수를 Tailwind 유틸리티 클래스와 연결합니다 */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,6 +17,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* 사용자의 OS가 다크모드일 경우 자동으로 색상이 변경됩니다 */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
