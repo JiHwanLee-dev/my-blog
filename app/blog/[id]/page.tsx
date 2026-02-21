@@ -1,4 +1,5 @@
 import posts from '../../data/posts';
+import LikeButton from '../../component/LikeButton';
 
 // Next.js 15부터 params는 Promise로 바뀌었습니다.
 // 그래서 반드시 async 함수로 선언하고, await로 params를 받아야 합니다.
@@ -19,6 +20,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     <main style={{ padding: '20px' }}>
       <h1>{post.title}</h1>
       <p>{post.content}</p>
+      <LikeButton />  {/* 클라이언트 컴포넌트 */}
     </main>
   );
 }
