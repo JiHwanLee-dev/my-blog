@@ -1,17 +1,11 @@
 import Link from 'next/link';
+import posts from '../data/posts';  // ← 그냥 직접 import
 
-async function getPosts() {
-  const res = await fetch('http://localhost:3000/api/posts');
-  return res.json();
-}
-
-export default async function BlogList() {
-  const posts = await getPosts();  // ← 서버에서 직접 fetch!
-
+export default function BlogList() {
   return (
     <main style={{ padding: '20px' }}>
       <h1>📝 블로그 목록</h1>
-      {posts.map((post: any) => (
+      {posts.map((post) => (
         <div key={post.id} style={{
           margin: '16px 0',
           padding: '16px',
