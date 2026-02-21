@@ -1,5 +1,5 @@
-// globals.css → 프로젝트 전체에 적용되는 전역 스타일 파일입니다.
-// layout.tsx에서 import하면 모든 페이지에 자동 적용됩니다.
+/* globals.css → 프로젝트 전체에 적용되는 전역 스타일 파일입니다.
+ layout.tsx에서 import하면 모든 페이지에 자동 적용됩니다. */
 
 @import "tailwindcss";
 
