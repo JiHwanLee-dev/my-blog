@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// Navbar 컴포넌트를 import합니다.
+// component/ 폴더는 Next.js 라우팅과 무관한 일반 컴포넌트를 보관하는 곳입니다.
+import Navbar from './component/Navbar';
 
 // Google Fonts에서 폰트를 자동으로 최적화해서 불러옵니다.
 // variable은 CSS 변수 이름 → globals.css에서 --font-geist-sans 로 사용됩니다.
@@ -35,6 +38,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Navbar를 body 최상단에 배치합니다. */}
+        {/* layout.tsx에 한 번만 추가하면 모든 페이지 상단에 자동으로 표시됩니다. */}
+        <Navbar />
         {/* 각 페이지의 실제 내용이 여기에 렌더링됩니다 */}
         {children}
       </body>
