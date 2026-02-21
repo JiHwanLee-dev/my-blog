@@ -6,6 +6,7 @@
 // 일반 <a> 태그는 페이지 전체를 새로 로딩하지만,
 // Link는 필요한 부분만 업데이트하는 클라이언트 사이드 네비게이션을 지원합니다. (더 빠름)
 import Link from 'next/link';
+import AuthButton from './AuthButton';
 
 export default function Navbar() {
   return (
@@ -26,6 +27,7 @@ export default function Navbar() {
       <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>
         📝 블로그
       </Link>
+      <AuthButton />
     </nav>
   );
 }
