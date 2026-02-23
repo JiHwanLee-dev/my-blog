@@ -27,6 +27,9 @@ export default function Navbar() {
       <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>
         📝 블로그
       </Link>
+      <Link href="/blog/write" style={{ color: 'white', textDecoration: 'none' }}>
+        📝 새 글 작성
+      </Link>
       <AuthButton />
     </nav>
   );
